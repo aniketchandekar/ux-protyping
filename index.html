@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekvin | Product Development Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1 class="heading">Rekvin</h1>
+            <p class="subheading">A non-linear, node-based product development canvas designed to bridge the gap between
+                creative ideation and technical feasibility.</p>
+        </header>
+
+        <section class="tabs-section">
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="milestone-1">
+                    <span>Milestone 1</span>
+                    <div class="btn-bg"></div>
+                </button>
+                <button class="tab-btn" data-tab="milestone-2">
+                    <span>Milestone 2</span>
+                    <div class="btn-bg"></div>
+                </button>
+                <div class="tab-indicator"></div>
+            </div>
+
+            <div class="tabs-content">
+                <div class="tab-panel active" id="milestone-1">
+                    <div class="panel-inner">
+                        <div class="content-section">
+                            <h3><i data-lucide="info"></i> 1. Introduction to Rekvin</h3>
+                            <p>Rekvin is a non-linear, node-based product development canvas designed to bridge the gap
+                                between creative ideation and technical feasibility. Unlike traditional whiteboarding
+                                tools that allow for free-form chaos, Rekvin uses a <strong>Waterfall-Logic
+                                    architecture</strong> where every design decision is tethered to a researched
+                                "Killer Assumption" and a strategic "Market Force."</p>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="alert-circle"></i> 2. The Problem</h3>
+                            <p>Current product management tools are either too rigid (Jira/Linear) or too messy
+                                (Miro/Figma).</p>
+                            <ul class="styled-list">
+                                <li><strong>The Gap:</strong> There is no tool that forces First Principles thinking.
+                                </li>
+                                <li><strong>The Result:</strong> Teams build "desirable" features that are technically
+                                    impossible (Feasibility) or commercially non-viable (Viability).</li>
+                                <li><strong>The Pain:</strong> Research artifacts (Personas, Journey Maps) often sit in
+                                    silos and don't interact with the actual system architecture.</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="users"></i> 3. The Users</h3>
+                            <div class="user-cards">
+                                <div class="user-card">
+                                    <div class="card-icon"><i data-lucide="settings"></i></div>
+                                    <h4>Technical Product Managers (TPMs)</h4>
+                                    <p>Who need to model system logic and edge cases before writing PRDs.</p>
+                                </div>
+                                <div class="user-card">
+                                    <div class="card-icon"><i data-lucide="palette"></i></div>
+                                    <h4>Senior UX Designers/Scientists</h4>
+                                    <p>Who want to validate their designs against hard data and behavioral metrics.</p>
+                                </div>
+                                <div class="user-card">
+                                    <div class="card-icon"><i data-lucide="graduation-cap"></i></div>
+                                    <h4>MSIS Students/Researchers</h4>
+                                    <p>Who require a structured, iterative environment to document their evidence-based
+                                        design process.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="zap"></i> 4. The Proposed Solution</h3>
+                            <p>Rekvin organizes the product lifecycle into <strong>Integrated Canvases</strong>
+                                (Ideation, Research, Design, Measurement).</p>
+                            <ul class="styled-list">
+                                <li>Uses <strong>Global D/V/F Lenses</strong> (Desirability, Viability, Feasibility) to
+                                    filter information across the workspace.</li>
+                                <li>Utilizes <strong>React Flow</strong> to visualize relationships between data points,
+                                    turning static artifacts into a living "System Contract."</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="list-checks"></i> 5. Feature List (Milestone 1 Scope)</h3>
+                            <div class="feature-grid">
+                                <div class="feature-item"><i data-lucide="layout"></i><span>Node-Based Workspace</span>
+                                </div>
+                                <div class="feature-item"><i data-lucide="git-branch"></i><span>Multi-Canvas
+                                        Transition</span></div>
+                                <div class="feature-item"><i data-lucide="layers"></i><span>Global Lens Toggles</span>
+                                </div>
+                                <div class="feature-item"><i data-lucide="box"></i><span>Artifact Nodes</span></div>
+                                <div class="feature-item"><i data-lucide="link"></i><span>Evidence Linking</span></div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="ban"></i> 6. Out of Scope</h3>
+                            <p class="low-opacity">What we will <strong>NOT</strong> implement:</p>
+                            <ul class="styled-list out-list">
+                                <li>Real-time Collaboration</li>
+                                <li>Figma Import/Export</li>
+                                <li>Full Project Management Suite</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="milestone-2">
+                    <div class="panel-inner" id="ds-container">
+                        <div class="ds-simple-container">
+                            <div class="ds-simple-card">
+                                <h2>Overview</h2>
+                                <p>Rekvin follows a <strong>"Dark Technical"</strong> aesthetic, inspired by
+                                    professional developer tools and scientific instruments. The design prioritizes
+                                    content density, focus, and clarity using a dark mode-first approach with
+                                    high-contrast accents for semantic meaning.</p>
+                            </div>
+
+                            <div class="ds-simple-card">
+                                <h2>1. Color Palette</h2>
+
+                                <h3>Core Backgrounds</h3>
+                                <p>The application uses a deep, cool-toned black palette to reduce eye strain and make
+                                    colored nodes pop.</p>
+                                <table class="ds-simple-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Token</th>
+                                            <th>Value</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>app-bg</code></td>
+                                            <td><span class="ds-swatch" style="background: #0e0e11;"></span>#0e0e11</td>
+                                            <td>Main canvas background</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>app-sidebar</code></td>
+                                            <td><span class="ds-swatch" style="background: #0a0a0f;"></span>#0a0a0f</td>
+                                            <td>Sidebar background</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>app-card</code></td>
+                                            <td><span class="ds-swatch" style="background: #18181b;"></span>#18181b</td>
+                                            <td>Node cards, Modals, Panels</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>app-input</code></td>
+                                            <td><span class="ds-swatch" style="background: #121217;"></span>#121217</td>
+                                            <td>Input fields</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>Semantic Accents</h3>
+                                <p>Colors are used strictly for meaning, not decoration.</p>
+                                <table class="ds-simple-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Color</th>
+                                            <th>Tailwind Class</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #c084fc;"></span><strong>Purple</strong></td>
+                                            <td><code>text-purple-400</code></td>
+                                            <td>AI-related actions, "Initial Idea", SCAMPER.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #60a5fa;"></span><strong>Blue</strong></td>
+                                            <td><code>text-blue-400</code></td>
+                                            <td>Mind Maps, Market Viability, DOC files.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #4ade80;"></span><strong>Green</strong></td>
+                                            <td><code>text-green-400</code></td>
+                                            <td>Opportunity Solution Trees, Technical Feasibility, Success states.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #f472b6;"></span><strong>Pink</strong></td>
+                                            <td><code>text-pink-400</code></td>
+                                            <td>Analogies, User Desirability.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #facc15;"></span><strong>Yellow</strong></td>
+                                            <td><code>text-yellow-400</code></td>
+                                            <td>Sticky Notes, How Might We, Warnings.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #f87171;"></span><strong>Red</strong></td>
+                                            <td><code>text-red-400</code></td>
+                                            <td>Problem Statements, Critical Assumptions, Errors, PDF files.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="ds-swatch"
+                                                    style="background: #9ca3af;"></span><strong>Gray</strong></td>
+                                            <td><code>text-gray-400/500</code></td>
+                                            <td>Secondary text, empty states.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <h3>Borders & Separators</h3>
+                                <p>Subtle white opacity is used for structure.</p>
+                                <ul>
+                                    <li><strong>Subtle</strong>: <code>border-white/5</code> (Dividers)</li>
+                                    <li><strong>Default</strong>: <code>border-white/10</code> (Panels, Inputs)</li>
+                                    <li><strong>Active/Hover</strong>: <code>border-white/20</code> (Nodes, Hover
+                                        states)</li>
+                                    <li><strong>Focus</strong>: <code>border-white/40</code> (Selected items)</li>
+                                </ul>
+                            </div>
+
+                            <div class="ds-simple-card">
+                                <h2>2. Typography</h2>
+                                <p><strong>Font Family:</strong> <code>Inter Tight</code> (Sans-serif)<br>Selected for
+                                    its modern, technical feel and high legibility at small sizes.</p>
+
+                                <h3>Hierarchy</h3>
+                                <table class="ds-simple-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Role</th>
+                                            <th>Style Example</th>
+                                            <th>Tailwind Classes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Display</strong></td>
+                                            <td
+                                                style="font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; color: #fff; line-height: 1.2;">
+                                                Display</td>
+                                            <td><code>text-5xl font-bold tracking-tight</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Headings</strong></td>
+                                            <td style="font-size: 1.5rem; font-weight: 700; color: #fff;">Headings</td>
+                                            <td><code>text-2xl font-bold text-white</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Labels</strong></td>
+                                            <td
+                                                style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #a1a1aa;">
+                                                Labels</td>
+                                            <td><code>text-xs font-bold tracking-wider uppercase opacity-90</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Body</strong></td>
+                                            <td
+                                                style="font-size: 1.125rem; font-weight: 300; line-height: 1.6; color: #d4d4d8;">
+                                                Body Text</td>
+                                            <td><code>text-lg font-light leading-relaxed</code> /
+                                                <code>text-sm text-gray-300</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Mono</strong></td>
+                                            <td style="font-family: monospace; font-size: 0.75rem; color: #60a5fa;">Mono
+                                            </td>
+                                            <td><code>font-mono text-xs</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="ds-simple-card">
+                                <h2>3. Component Recipes</h2>
+
+                                <h3>Idea Nodes</h3>
+                                <p>The core building block of the canvas.</p>
+                                <ul>
+                                    <li><strong>Container</strong>:
+                                        <code>min-w-[320px] max-w-[420px] rounded-2xl p-6 border</code></li>
+                                    <li><strong>Default State</strong>:
+                                        <code>bg-[#18181b] border-white/20 shadow-2xl shadow-black/50</code></li>
+                                    <li><strong>Suggested</strong>:
+                                        <code>bg-[#18181b]/40 backdrop-blur-sm border-white/40 border-dashed animate-pulse-slow</code>
+                                    </li>
+                                </ul>
+                                <div
+                                    style="margin-top: 16px; padding: 24px; background: #0e0e11; border-radius: 12px; display: flex; gap: 24px;">
+                                    <div
+                                        style="background: #18181b; border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+                                        <div
+                                            style="color: #facc15; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                            <i data-lucide="zap" style="width: 16px; height: 16px;"></i> Concept</div>
+                                        <div
+                                            style="color: #fff; font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">
+                                            Product Discovery</div>
+                                        <div style="color: #a1a1aa; font-size: 0.875rem;">Initial exploration of the
+                                            market viability.</div>
+                                    </div>
+
+                                    <div
+                                        style="background: rgba(24,24,27,0.4); backdrop-filter: blur(4px); border: 1px dashed rgba(255,255,255,0.4); border-radius: 16px; padding: 24px; width: 320px; animation: ds-pulse-slow 3s infinite;">
+                                        <div
+                                            style="color: #c084fc; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+                                            <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i> AI
+                                            Suggestion</div>
+                                        <div
+                                            style="color: #fff; font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">
+                                            Add Gamification</div>
+                                        <div style="color: #a1a1aa; font-size: 0.875rem;">Consider adding a points
+                                            system to increase daily active usage.</div>
+                                    </div>
+                                </div>
+
+                                <h3 style="margin-top: 32px;">Input Bar</h3>
+                                <p>Designed for focus and "flow" state entry.</p>
+                                <ul>
+                                    <li><strong>Container</strong>:
+                                        <code>bg-[#18181b] border rounded-2xl p-2 shadow-2xl shadow-black/50</code></li>
+                                    <li><strong>Text Area</strong>:
+                                        <code>bg-transparent text-white text-lg font-light h-20</code></li>
+                                </ul>
+                                <div style="margin-top: 16px; padding: 24px; background: #0e0e11; border-radius: 12px;">
+                                    <div
+                                        style="background: #18181b; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 8px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+                                        <i data-lucide="plus" style="color: #a1a1aa; width: 20px;"></i>
+                                        <div
+                                            style="flex: 1; color: #a1a1aa; font-family: 'Inter Tight', sans-serif; font-size: 1.125rem; font-weight: 300; padding: 12px 0;">
+                                            Add a new idea...</div>
+                                        <button
+                                            style="background: #c084fc; color: #fff; border: none; padding: 8px 16px; border-radius: 12px; font-weight: 600; cursor: pointer;">Send</button>
+                                    </div>
+                                </div>
+
+                                <h3 style="margin-top: 32px;">Modals & Overlays</h3>
+                                <p>Used for Onboarding and Phase Completion.</p>
+                                <ul>
+                                    <li><strong>Backdrop</strong>: <code>bg-black/80 backdrop-blur-md</code></li>
+                                    <li><strong>Card</strong>:
+                                        <code>bg-[#18181b] border border-white/10 rounded-2xl shadow-2xl</code></li>
+                                </ul>
+                                <div
+                                    style="margin-top: 16px; background: rgba(0,0,0,0.8); padding: 32px; border-radius: 12px; display: flex; justify-content: center; backdrop-filter: blur(8px);">
+                                    <div
+                                        style="background: #18181b; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.8); width: 100%; max-width: 400px;">
+                                        <h4
+                                            style="color: #fff; margin-bottom: 8px; font-size: 1.125rem; font-weight: 600;">
+                                            Phase Complete</h4>
+                                        <p style="color: #a1a1aa; font-size: 0.875rem; margin: 0;">You have finished the
+                                            Ideation phase.</p>
+                                    </div>
+                                </div>
+
+                                <h3 style="margin-top: 32px;">Sidebars & Panels</h3>
+                                <p>Floating utility panels.</p>
+                                <ul>
+                                    <li><strong>Container</strong>:
+                                        <code>bg-[#18181b] border border-white/10 rounded-xl shadow-2xl backdrop-blur-sm</code>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="ds-simple-card">
+                                <h2>4. Effects & Animation</h2>
+
+                                <h3>Shadows</h3>
+                                <p>Deep, diffuse shadows are used to create depth in the dark environment.</p>
+                                <ul>
+                                    <li><strong>Elevation</strong>: <code>shadow-2xl shadow-black/50</code> (Nodes)</li>
+                                    <li><strong>Floating</strong>: <code>shadow-2xl shadow-black/80</code> (Modals)</li>
+                                </ul>
+
+                                <h3>Animations</h3>
+                                <p>Custom keyframes defined in <code>tailwind.config</code>.</p>
+                                <ul>
+                                    <li><strong><code>animate-fade-in</code></strong>: Smooth entry for new elements.
+                                    </li>
+                                    <li><strong><code>animate-fade-in-up</code></strong>: Upward drift for landing page
+                                        elements.</li>
+                                    <li><strong><code>animate-pulse-slow</code></strong>: 3s pulse for "Suggested" nodes
+                                        (breathing effect).</li>
+                                    <li><strong><code>animate-spin</code></strong>: Loading states (Lucide
+                                        <code>Loader2</code>).</li>
+                                </ul>
+
+                                <h3>Glassmorphism</h3>
+                                <p>Used sparingly to indicate layering.</p>
+                                <ul>
+                                    <li><code>backdrop-blur-sm</code>: Sticky headers, floating panels.</li>
+                                    <li><code>backdrop-blur-md</code>: Modal overlays.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
