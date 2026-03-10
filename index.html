@@ -33,6 +33,10 @@
                     <span>Milestone 2</span>
                     <div class="btn-bg"></div>
                 </button>
+                <button class="tab-btn" data-tab="milestone-3">
+                    <span>Milestone 3</span>
+                    <div class="btn-bg"></div>
+                </button>
                 <div class="tab-indicator"></div>
             </div>
 
@@ -277,7 +281,8 @@
                                                 style="font-size: 1.125rem; font-weight: 300; line-height: 1.6; color: #d4d4d8;">
                                                 Body Text</td>
                                             <td><code>text-lg font-light leading-relaxed</code> /
-                                                <code>text-sm text-gray-300</code></td>
+                                                <code>text-sm text-gray-300</code>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td><strong>Mono</strong></td>
@@ -296,9 +301,11 @@
                                 <p>The core building block of the canvas.</p>
                                 <ul>
                                     <li><strong>Container</strong>:
-                                        <code>min-w-[320px] max-w-[420px] rounded-2xl p-6 border</code></li>
+                                        <code>min-w-[320px] max-w-[420px] rounded-2xl p-6 border</code>
+                                    </li>
                                     <li><strong>Default State</strong>:
-                                        <code>bg-[#18181b] border-white/20 shadow-2xl shadow-black/50</code></li>
+                                        <code>bg-[#18181b] border-white/20 shadow-2xl shadow-black/50</code>
+                                    </li>
                                     <li><strong>Suggested</strong>:
                                         <code>bg-[#18181b]/40 backdrop-blur-sm border-white/40 border-dashed animate-pulse-slow</code>
                                     </li>
@@ -309,7 +316,8 @@
                                         style="background: #18181b; border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px; width: 320px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
                                         <div
                                             style="color: #facc15; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
-                                            <i data-lucide="zap" style="width: 16px; height: 16px;"></i> Concept</div>
+                                            <i data-lucide="zap" style="width: 16px; height: 16px;"></i> Concept
+                                        </div>
                                         <div
                                             style="color: #fff; font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">
                                             Product Discovery</div>
@@ -322,7 +330,8 @@
                                         <div
                                             style="color: #c084fc; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
                                             <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i> AI
-                                            Suggestion</div>
+                                            Suggestion
+                                        </div>
                                         <div
                                             style="color: #fff; font-size: 1.125rem; font-weight: 600; margin-bottom: 8px;">
                                             Add Gamification</div>
@@ -335,9 +344,11 @@
                                 <p>Designed for focus and "flow" state entry.</p>
                                 <ul>
                                     <li><strong>Container</strong>:
-                                        <code>bg-[#18181b] border rounded-2xl p-2 shadow-2xl shadow-black/50</code></li>
+                                        <code>bg-[#18181b] border rounded-2xl p-2 shadow-2xl shadow-black/50</code>
+                                    </li>
                                     <li><strong>Text Area</strong>:
-                                        <code>bg-transparent text-white text-lg font-light h-20</code></li>
+                                        <code>bg-transparent text-white text-lg font-light h-20</code>
+                                    </li>
                                 </ul>
                                 <div style="margin-top: 16px; padding: 24px; background: #0e0e11; border-radius: 12px;">
                                     <div
@@ -356,7 +367,8 @@
                                 <ul>
                                     <li><strong>Backdrop</strong>: <code>bg-black/80 backdrop-blur-md</code></li>
                                     <li><strong>Card</strong>:
-                                        <code>bg-[#18181b] border border-white/10 rounded-2xl shadow-2xl</code></li>
+                                        <code>bg-[#18181b] border border-white/10 rounded-2xl shadow-2xl</code>
+                                    </li>
                                 </ul>
                                 <div
                                     style="margin-top: 16px; background: rgba(0,0,0,0.8); padding: 32px; border-radius: 12px; display: flex; justify-content: center; backdrop-filter: blur(8px);">
@@ -399,7 +411,8 @@
                                     <li><strong><code>animate-pulse-slow</code></strong>: 3s pulse for "Suggested" nodes
                                         (breathing effect).</li>
                                     <li><strong><code>animate-spin</code></strong>: Loading states (Lucide
-                                        <code>Loader2</code>).</li>
+                                        <code>Loader2</code>).
+                                    </li>
                                 </ul>
 
                                 <h3>Glassmorphism</h3>
@@ -409,6 +422,106 @@
                                     <li><code>backdrop-blur-md</code>: Modal overlays.</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 Tab -->
+                <div class="tab-panel" id="milestone-3">
+                    <div class="panel-inner">
+                        <div class="content-section">
+                            <h3><i data-lucide="sparkles"></i> 1. AI-Powered UX Research</h3>
+                            <p>Rekvin transforms static research into a dynamic, autonomous testing environment. By
+                                leveraging the <strong>Gemini Multimodal Live API</strong>, the platform enables
+                                real-time interaction between AI personas and live applications.</p>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="brain-circuit"></i> 2. Core Gen AI Integration</h3>
+                            <ul class="styled-list">
+                                <li><strong>Multimodal Live Agent:</strong> Streams the browser's viewport at 1FPS,
+                                    allowing Gemini to "see" and interact with UIs as a human would.</li>
+                                <li><strong>Voice Intervention:</strong> Users can speak directly to the agent
+                                    mid-session
+                                    to redirect testing strategy or provide real-time guidance.</li>
+                                <li><strong>Behavioral Analysis:</strong> The Metrics Hub maps vision breadcrumbs to
+                                    quantitative data like <em>Comprehension Risk</em> and <em>Dead-end Encounters</em>.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="layers"></i> 3. Visual Showcase</h3>
+                            <div style="margin-bottom: 2rem;">
+                                <a href="https://github.com/aniketchandekar/rekvin-persona-engine" target="_blank"
+                                    class="ds-link-button"
+                                    style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--accent-color); color: #000; padding: 0.8rem 1.5rem; border-radius: 12px; font-weight: 600; text-decoration: none; transition: transform 0.2s ease;">
+                                    <i data-lucide="github"></i> Test it out on GitHub
+                                </a>
+                            </div>
+                            <div class="user-cards" style="grid-template-columns: 1fr;">
+                                <div class="user-card" style="grid-column: span 1;">
+                                    <img src="Images/image1.png" alt="Persona Calibration"
+                                        style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
+                                    <h4>Persona Engine</h4>
+                                    <p>Deploying autonomous agents to test desirability and technical feasibility.</p>
+                                </div>
+                                <div class="user-card" style="grid-column: span 1;">
+                                    <img src="Images/image.png" alt="Rekvin Workspace"
+                                        style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
+                                    <h4>Agent Testing</h4>
+                                    <p>Visualizing the product development lifecycle through interconnected nodes and
+                                        agent interaction.</p>
+                                </div>
+                                <div class="user-card" style="grid-column: span 1;">
+                                    <img src="Images/image2.png" alt="Metrics Hub"
+                                        style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
+                                    <h4>Metrics Evaluation</h4>
+                                    <p>Transforming session recordings into actionable expert-driven verdicts and
+                                        behavioral metrics.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="swatchbook"></i> 4. Discussion of Design Choices</h3>
+                            <div class="ds-simple-container" style="margin-top: 1.5rem;">
+                                <div class="ds-simple-card">
+                                    <h2>Dark Technical Aesthetic</h2>
+                                    <p>The choice of a <strong>#0e0e11</strong> background with high-contrast semantic
+                                        accents is designed to minimize cognitive load and mimic the feel of
+                                        professional
+                                        scientific instruments. This aesthetic signals precision and focus, essential
+                                        for
+                                        technical product management.</p>
+                                </div>
+                                <div class="ds-simple-card">
+                                    <h2>Waterfall-Logic Architecture</h2>
+                                    <p>We chose a structured, node-based workflow over a free-form canvas to force
+                                        <strong>First Principles thinking</strong>. By anchoring every feature to a
+                                        "Killer Assumption," we ensure that feasibility and viability are never
+                                        secondary to desirability.
+                                    </p>
+                                </div>
+                                <div class="ds-simple-card">
+                                    <h2>Precision Typography</h2>
+                                    <p>The use of <strong>Inter Tight</strong> provides a modern, condensed feel that
+                                        allows for high content density without sacrificing readability. Large display
+                                        headings create a sense of scale, while mono fonts provide technical grounding.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-section">
+                            <h3><i data-lucide="check-circle"></i> 5. Persona Calibration</h3>
+                            <p>Rekvin's dual-calibration system ensures grounded research:</p>
+                            <ul class="styled-list">
+                                <li><strong>Pre-Test:</strong> Evidence Quality Scores prevent AI hallucinations by
+                                    validating grounding data.</li>
+                                <li><strong>Post-Test:</strong> Persona-Fit validation compares agent narration against
+                                    technical outcomes to refine the user archetype.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
