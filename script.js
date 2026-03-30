@@ -20,7 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 1,
             y: 0,
             duration: 1,
-            startAt: { y: 30 }
+            startAt: { y: 30 },
+            onComplete: () => {
+                // Animate initial active panel
+                const initialPanel = document.querySelector('.tab-panel.active');
+                if (initialPanel) {
+                    gsap.fromTo(initialPanel,
+                        { opacity: 0, y: 30 },
+                        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+                    );
+                }
+            }
         }, '-=0.9');
 
     // --- Tabs Logic ---
@@ -87,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Microinteractions ---
     tabBtns.forEach(btn => {
         btn.addEventListener('mouseenter', () => {
-            gsap.to(btn.querySelector('span'), {
+            gsap.to(btn.querySelector('.tab-btn-content'), {
                 y: -2,
                 duration: 0.2
             });
         });
         btn.addEventListener('mouseleave', () => {
-            gsap.to(btn.querySelector('span'), {
+            gsap.to(btn.querySelector('.tab-btn-content'), {
                 y: 0,
                 duration: 0.2
             });

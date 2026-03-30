@@ -25,23 +25,39 @@
 
         <section class="tabs-section">
             <div class="tabs-nav">
-                <button class="tab-btn active" data-tab="milestone-1">
-                    <span>Milestone 1</span>
-                    <div class="btn-bg"></div>
-                </button>
-                <button class="tab-btn" data-tab="milestone-2">
-                    <span>Milestone 2</span>
+                <button class="tab-btn active" data-tab="milestone-2">
+                    <div class="tab-btn-content">
+                        <span>Milestone 2</span>
+                        <span class="tab-subtitle">Project Proposal</span>
+                    </div>
                     <div class="btn-bg"></div>
                 </button>
                 <button class="tab-btn" data-tab="milestone-3">
-                    <span>Milestone 3</span>
+                    <div class="tab-btn-content">
+                        <span>Milestone 3</span>
+                        <span class="tab-subtitle">Design Document</span>
+                    </div>
+                    <div class="btn-bg"></div>
+                </button>
+                <button class="tab-btn" data-tab="milestone-4">
+                    <div class="tab-btn-content">
+                        <span>Milestone 4</span>
+                        <span class="tab-subtitle">Alpha Release</span>
+                    </div>
+                    <div class="btn-bg"></div>
+                </button>
+                <button class="tab-btn" data-tab="milestone-5">
+                    <div class="tab-btn-content">
+                        <span>Milestone 5</span>
+                        <span class="tab-subtitle">Beta Release</span>
+                    </div>
                     <div class="btn-bg"></div>
                 </button>
                 <div class="tab-indicator"></div>
             </div>
 
             <div class="tabs-content">
-                <div class="tab-panel active" id="milestone-1">
+                <div class="tab-panel active" id="milestone-2">
                     <div class="panel-inner">
                         <div class="content-section">
                             <h3><i data-lucide="info"></i> 1. Introduction to Rekvin</h3>
@@ -101,7 +117,7 @@
                         </div>
 
                         <div class="content-section">
-                            <h3><i data-lucide="list-checks"></i> 5. Feature List (Milestone 1 Scope)</h3>
+                            <h3><i data-lucide="list-checks"></i> 5. Feature List (Milestone 2 Scope)</h3>
                             <div class="feature-grid">
                                 <div class="feature-item"><i data-lucide="layout"></i><span>Node-Based Workspace</span>
                                 </div>
@@ -125,7 +141,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-panel" id="milestone-2">
+                <div class="tab-panel" id="milestone-3">
                     <div class="panel-inner" id="ds-container">
                         <div class="ds-simple-container">
                             <div class="ds-simple-card">
@@ -426,18 +442,130 @@
                     </div>
                 </div>
 
-                <!-- Milestone 3 Tab -->
-                <div class="tab-panel" id="milestone-3">
+                <!-- Milestone 4 Tab -->
+                <div class="tab-panel" id="milestone-4">
                     <div class="panel-inner">
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="history"></i> 1. The Evolutionary Journey</h3>
+                            <p>Every version of Rekvin asked a different question. What started as <em>"how do we add more context to design decisions?"</em>
+                                became <em>"how do we test if those decisions were even right?"</em> This is the story of three pivots, each one sharper than the last.</p>
+
+                            <!-- Phase 1 -->
+                            <div class="evolution-section">
+                                <span class="phase-tag">Phase 1 (v1) &nbsp;·&nbsp; The Context Problem</span>
+                                <h4>More Context. Same Result.</h4>
+                                <p>The original frustration was simple: design tools like Miro let you sketch anything, but they don't force you to
+                                    justify <em>why</em>. So Rekvin v1 was built around a node-based canvas where every feature had to be connected
+                                    to a "Killer Assumption" and a "Market Force." If a node had no grounding evidence, it couldn't exist.</p>
+                                <p>The canvas came alive. Workflows emerged. Relationships between ideas that were previously invisible became explicit.
+                                    Teams could trace a single button all the way back to a user pain point.</p>
+                                <p>But something felt off. After a few sessions, we noticed that the <strong>output</strong> — the final design decisions —
+                                    wasn't meaningfully different from what teams produced without the tool. We had built a better filing cabinet. Not a better design environment.</p>
+                                <div class="evolution-gallery">
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v1/Image1.png" alt="v1 Node Canvas">
+                                        <div class="gallery-caption"><strong>The v1 canvas.</strong> Nodes connected by logic, not just lines. Every design decision had to be justified by a grounding assumption.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v1/Image2.png" alt="v1 Assumption Linking">
+                                        <div class="gallery-caption"><strong>Assumption linking.</strong> Each feature node directly tied to its "Market Force" — making invisible constraints visible.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v1/Image3.png" alt="v1 Complex Mapping">
+                                        <div class="gallery-caption"><strong>Complex system mapping.</strong> As projects grew, the canvas revealed structural gaps in product logic that linear tools hide.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v1/Image4.png" alt="v1 Workflow">
+                                        <div class="gallery-caption"><strong>Emergent workflows.</strong> Teams created design trails — visual breadcrumbs from ideation to implementation.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v1/Image5.png" alt="v1 Feature Scope">
+                                        <div class="gallery-caption"><strong>Scoping with evidence.</strong> Features were only added if they passed the feasibility-viability filter, baked into the canvas structure.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 2 -->
+                            <div class="evolution-section">
+                                <span class="phase-tag">Phase 2 (v2) &nbsp;·&nbsp; The Comparison Problem</span>
+                                <h4>The Output of One Is the Input of Another.</h4>
+                                <p>The v1 insight led to a structural question: what if the <em>output</em> of one design phase could become the
+                                    <em>input</em> for the next? This became Rekvin v2 — a multi-canvas system where design artifacts flowed
+                                    between stages like data in a pipeline.</p>
+                                <p>At the same time, something else shifted. The cost of building prototypes had dropped dramatically. AI coding tools
+                                    could spin up a working interface in hours. The bottleneck was no longer <em>building</em> — it was
+                                    <em>choosing</em>. Teams had three viable interface options and no rigorous way to compare them.</p>
+                                <p>Rekvin v2 tried to solve that by letting designers run parallel canvases side by side. But the more we watched teams
+                                    use it, the more clear the problem became: <strong>managing separate canvases added friction without adding clarity.</strong>
+                                    People were spending more time organizing the tool than using it to think.</p>
+                                <div class="evolution-gallery">
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image1.png" alt="v2 Canvas Architecture">
+                                        <div class="gallery-caption"><strong>Multi-canvas architecture.</strong> Each phase of the product lifecycle lived on its own canvas, with structured handoff points between stages.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image2.png" alt="v2 Output-Input Flow">
+                                        <div class="gallery-caption"><strong>Output-as-input pipelines.</strong> Research artifacts flowed directly into design canvases, eliminating the translation layer between discovery and execution.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image3.png" alt="v2 Canvas Flow">
+                                        <div class="gallery-caption"><strong>Structured canvas flow.</strong> Designing the transitions between phases to maintain context without losing velocity.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image4.png" alt="v2 Parallel Design">
+                                        <div class="gallery-caption"><strong>Parallel interface variants.</strong> Running competing design directions simultaneously to enable evidence-based decision making.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image5.png" alt="v2 Comparison">
+                                        <div class="gallery-caption"><strong>Side-by-side evaluation.</strong> Comparing UX patterns across variants to find which interface genuinely served user needs better.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v2/Image6.png" alt="v2 Interface Logic">
+                                        <div class="gallery-caption"><strong>Interface logic modeling.</strong> Mapping how user flows translated to system outcomes — exposing edge cases before they became bugs.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phase 3 -->
+                            <div class="evolution-section">
+                                <span class="phase-tag">Phase 3 (v3) &nbsp;·&nbsp; The Validation Shift</span>
+                                <h4>Stop Building. Start Testing.</h4>
+                                <p>The real problem wasn't ever the canvas. It was the question being asked. We had been asking <em>"how should we design this?"</em>
+                                    when the more powerful question was <em>"does this design actually work — for a real person, with real goals, under real pressure?"</em></p>
+                                <p>Rekvin v3 abandoned the multi-canvas architecture entirely. Instead of helping designers document their intent,
+                                    it deploys <strong>autonomous synthetic personas</strong> — AI agents calibrated with behavioral profiles, cognitive biases,
+                                    and domain expertise — to test interfaces directly.</p>
+                                <p>The persona navigates a live application like a real user would. Gemini's multimodal vision watches the UI in real time.
+                                    Every hesitation, misclick, and dead-end becomes data. After each session, the Metrics Hub translates the agent's
+                                    raw experience into a structured analysis: <em>Comprehension Risk, Friction Points, Task Completion Confidence</em>.
+                                    Design decisions that seemed solid on paper reveal their cracks under scrutiny.</p>
+                                <p>The prototype is no longer the deliverable. It's the laboratory.</p>
+                                <div class="evolution-gallery">
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v3/image.png" alt="v3 Workspace">
+                                        <div class="gallery-caption"><strong>The Alpha workspace.</strong> Persona calibration, live session control, and behavioral metrics — all in a single interface.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v3/image1.png" alt="v3 Persona Calibration">
+                                        <div class="gallery-caption"><strong>Persona calibration.</strong> Before testing begins, an agent is calibrated with a user archetype — expertise level, cognitive style, and domain knowledge.</div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <img src="Images/Rekvin-v3/image2.png" alt="v3 Metrics Hub">
+                                        <div class="gallery-caption"><strong>The Metrics Hub.</strong> Session recordings transformed into quantitative behavioral verdicts — turning subjective UX observations into structured evidence.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="content-section">
-                            <h3><i data-lucide="sparkles"></i> 1. AI-Powered UX Research</h3>
+                            <h3><i data-lucide="sparkles"></i> 2. AI-Powered UX Research</h3>
                             <p>Rekvin transforms static research into a dynamic, autonomous testing environment. By
                                 leveraging the <strong>Gemini Multimodal Live API</strong>, the platform enables
                                 real-time interaction between AI personas and live applications.</p>
                         </div>
 
                         <div class="content-section">
-                            <h3><i data-lucide="brain-circuit"></i> 2. Core Gen AI Integration</h3>
+                            <h3><i data-lucide="brain-circuit"></i> 3. Core Gen AI Integration</h3>
                             <ul class="styled-list">
                                 <li><strong>Multimodal Live Agent:</strong> Streams the browser's viewport at 1FPS,
                                     allowing Gemini to "see" and interact with UIs as a human would.</li>
@@ -451,7 +579,7 @@
                         </div>
 
                         <div class="content-section">
-                            <h3><i data-lucide="layers"></i> 3. Visual Showcase</h3>
+                            <h3><i data-lucide="layers"></i> 4. Visual Showcase</h3>
                             <div style="margin-bottom: 2rem;">
                                 <a href="https://github.com/aniketchandekar/rekvin-persona-engine" target="_blank"
                                     class="ds-link-button"
@@ -461,20 +589,20 @@
                             </div>
                             <div class="user-cards" style="grid-template-columns: 1fr;">
                                 <div class="user-card" style="grid-column: span 1;">
-                                    <img src="Images/image1.png" alt="Persona Calibration"
+                                    <img src="Images/Rekvin-v3/image1.png" alt="Persona Calibration"
                                         style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
                                     <h4>Persona Engine</h4>
                                     <p>Deploying autonomous agents to test desirability and technical feasibility.</p>
                                 </div>
                                 <div class="user-card" style="grid-column: span 1;">
-                                    <img src="Images/image.png" alt="Rekvin Workspace"
+                                    <img src="Images/Rekvin-v3/image.png" alt="Rekvin Workspace"
                                         style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
                                     <h4>Agent Testing</h4>
                                     <p>Visualizing the product development lifecycle through interconnected nodes and
                                         agent interaction.</p>
                                 </div>
                                 <div class="user-card" style="grid-column: span 1;">
-                                    <img src="Images/image2.png" alt="Metrics Hub"
+                                    <img src="Images/Rekvin-v3/image2.png" alt="Metrics Hub"
                                         style="width: 100%; border-radius: 12px; margin-bottom: 1rem; border: 1px solid var(--border-default);">
                                     <h4>Metrics Evaluation</h4>
                                     <p>Transforming session recordings into actionable expert-driven verdicts and
@@ -484,7 +612,7 @@
                         </div>
 
                         <div class="content-section">
-                            <h3><i data-lucide="swatchbook"></i> 4. Discussion of Design Choices</h3>
+                            <h3><i data-lucide="swatchbook"></i> 5. Discussion of Design Choices</h3>
                             <div class="ds-simple-container" style="margin-top: 1.5rem;">
                                 <div class="ds-simple-card">
                                     <h2>Dark Technical Aesthetic</h2>
@@ -514,7 +642,7 @@
                         </div>
 
                         <div class="content-section">
-                            <h3><i data-lucide="check-circle"></i> 5. Persona Calibration</h3>
+                            <h3><i data-lucide="check-circle"></i> 6. Persona Calibration</h3>
                             <p>Rekvin's dual-calibration system ensures grounded research:</p>
                             <ul class="styled-list">
                                 <li><strong>Pre-Test:</strong> Evidence Quality Scores prevent AI hallucinations by
@@ -523,6 +651,232 @@
                                     technical outcomes to refine the user archetype.</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 5 Tab -->
+                <div class="tab-panel" id="milestone-5">
+                    <div class="panel-inner">
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="sparkles"></i> 1. Beta Release: From Lofi to Hifi</h3>
+                            <p>For Milestone 5, we completely departed from the initial wireframe structures, moving Rekvin into a fully realized, high-fidelity environment. This is not a refinement—it's a reimagining of the workspace as an immersive research laboratory.</p>
+                            
+                            <!-- Hifi Flow Showcase -->
+                            <div class="evolution-section">
+                                <span class="phase-tag">Core Experience</span>
+                                <h4>High-Fidelity Visual Flow</h4>
+                                <p>The beta release focuses on establishing the core loop: from defining research constraints to watching autonomous agents test them.</p>
+                                <div class="full-width-showcase">
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Homepage.png" alt="Homepage">
+                                        <div class="full-width-caption"><strong>The Entry Point.</strong> Grounding the user in the "Dark Technical" aesthetic immediately.</div>
+                                    </div>
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Project.png" alt="Project Setup">
+                                        <div class="full-width-caption"><strong>Project Configuration.</strong> Setting up the cognitive boundaries for the test sessions.</div>
+                                    </div>
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Personas.png" alt="Persona Engine">
+                                        <div class="full-width-caption"><strong>The Persona Engine.</strong> Calibrating specialized, synthetic archetypes with deep domain context.</div>
+                                    </div>
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Testing.png" alt="Testing Environment">
+                                        <div class="full-width-caption"><strong>Test Configuration.</strong> Preparing the multi-agent system for a live interface audit.</div>
+                                    </div>
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Live session.png" alt="Live Session">
+                                        <div class="full-width-caption"><strong>Live Session Execution.</strong> A multimodal agent actively navigating and reasoning through a UI in real-time.</div>
+                                    </div>
+                                    <div class="full-width-item">
+                                        <img src="Images/Rekvin-v4/Metrics.png" alt="Metrics Dashboard">
+                                        <div class="full-width-caption"><strong>The Metrics Hub.</strong> Post-session extrapolation where subjective hesitations are converted into hard behavioral data.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Design Choices -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="swatchbook"></i> 2. Rekvin Design System (Detailed)</h3>
+                            <p>This section outlines the core design principles, tokens, and component patterns used in the Rekvin Synthetic Persona Engine.</p>
+                            
+                            <div class="ds-simple-container" style="display: flex; flex-direction: column; gap: 2rem; margin-top: 1.5rem;">
+                                <!-- Theme Strategy -->
+                                <div class="ds-simple-card">
+                                    <h2>1. Theme Strategy: Dual Aesthetic</h2>
+                                    <p>Rekvin supports a dual-theme system that maintains its premium identity across both low-light and high-light environments.</p>
+                                    <div style="margin-top: 1rem;">
+                                        <strong>Variant A: "Ink & White" (Dark Mode - Default)</strong>
+                                        <p>The core aesthetic utilized today. Inspired by night-time research and high-contrast terminal environments.</p>
+                                        <ul class="styled-list">
+                                            <li><strong>Core Surface:</strong> <code>#0C0B10</code> (Ink) - Deep black with a slight purple undertone.</li>
+                                            <li><strong>Primary Text:</strong> <code>#FFFFFF</code> (White) - Pure clinical white for maximum contrast.</li>
+                                            <li><strong>Rules/Dividers:</strong> Translucent white (<code>rgba(255,255,255,0.06)</code>).</li>
+                                            <li><strong>Vibe:</strong> Immersive, surgical, nocturnal.</li>
+                                        </ul>
+                                    </div>
+                                    <div style="margin-top: 1.5rem;">
+                                        <strong>Variant B: "Paper & Ink" (Light Mode - Concept)</strong>
+                                        <p>The conceptual counterpart. Inspired by physical research notebooks and clinical documentation.</p>
+                                        <ul class="styled-list">
+                                            <li><strong>Core Surface:</strong> <code>#FFFFFF</code> (White) - Pure white background.</li>
+                                            <li><strong>Secondary Surface:</strong> <code>#F8F8F8</code> (Off-White) - Used for cards and inset panels.</li>
+                                            <li><strong>Primary Text:</strong> <code>#0C0B10</code> (Ink) - Deep black for maximum legibility.</li>
+                                            <li><strong>Rules/Dividers:</strong> Translucent black (<code>rgba(12,11,16,0.08)</code>).</li>
+                                            <li><strong>Vibe:</strong> Clinical, tactical, high-contrast.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Shared Visual Effects -->
+                                <div class="ds-simple-card">
+                                    <h2>2. Shared Visual Effects</h2>
+                                    <ul class="styled-list">
+                                        <li><strong>Background Texture:</strong> Both modes utilize a procedural noise overlay (<code>opacity: 0.035</code>) to simulate organic paper/grain.</li>
+                                        <li><strong>Backdrop Blur:</strong> <code>backdrop-blur-xl</code> is constant across themes, effectively "tinting" the underlying glass based on the mode.</li>
+                                        <li><strong>Corner Radius:</strong> Standard <code>0.625rem</code> (10px) on both themes to maintain softness.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Color Palette -->
+                                <div class="ds-simple-card">
+                                    <h2>3. Color Palette</h2>
+                                    <h3>Base Surfaces (Semantic Mapping)</h3>
+                                    <table class="ds-simple-table" style="margin-top: 1rem;">
+                                        <thead>
+                                            <tr>
+                                                <th>Token</th>
+                                                <th>Dark Mode (Ink & White)</th>
+                                                <th>Light Mode (Paper & Ink)</th>
+                                                <th>Usage</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label>Primary BG</label></td>
+                                                <td><code>#0C0B10</code> (Ink)</td>
+                                                <td><code>#FFFFFF</code> (White)</td>
+                                                <td>Main app background</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Secondary BG</label></td>
+                                                <td><code>#1A1825</code> (Ink-2)</td>
+                                                <td><code>#F8F8F8</code> (Off-White)</td>
+                                                <td>Sidebar, Cards, Panels</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Tertiary BG</label></td>
+                                                <td><code>#242233</code> (Ink-3)</td>
+                                                <td><code>#F0F0F0</code> (Off-White-2)</td>
+                                                <td>Inset fields, Hovers</td>
+                                            </tr>
+                                            <tr>
+                                                <td><label>Primary Text</label></td>
+                                                <td><code>#FFFFFF</code> (White)</td>
+                                                <td><code>#0C0B10</code> (Ink)</td>
+                                                <td>Main content text</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <h3 style="margin-top: 1.5rem;">Node Taxonomy</h3>
+                                    <table class="ds-simple-table" style="margin-top: 1rem;">
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Dark Mode Hex</th>
+                                                <th>Light Mode Hex</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="ds-swatch" style="background: #E8C547;"></span> Idea</td>
+                                                <td><code>#E8C547</code></td>
+                                                <td><code>#9A7D0A</code></td>
+                                                <td>Core concepts and product seeds</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ds-swatch" style="background: #7ED4A0;"></span> Persona</td>
+                                                <td><code>#7ED4A0</code></td>
+                                                <td><code>#3D7051</code></td>
+                                                <td>Synthesized user archetypes</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ds-swatch" style="background: #F4845F;"></span> Research</td>
+                                                <td><code>#F4845F</code></td>
+                                                <td><code>#B04D2D</code></td>
+                                                <td>Web research and market data</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ds-swatch" style="background: #6BAED6;"></span> Input</td>
+                                                <td><code>#6BAED6</code></td>
+                                                <td><code>#2C5E7A</code></td>
+                                                <td>Raw user quotes and direct feedback</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Typography -->
+                                <div class="ds-simple-card">
+                                    <h2>4. Typography: The "Editorial" System</h2>
+                                    <p>Rekvin uses a three-tier typography system to distinguish between storytelling, utility, and technical metadata.</p>
+                                    <ul class="styled-list">
+                                        <li><strong>Tier 1: Storytelling (Serif)</strong>
+                                            <br><em>Font:</em> "Cormorant Garamond"
+                                            <br><em>Usage:</em> Hero statements, value headings, and emphasized pull-quotes.
+                                            <br><em>Styling:</em> <code>italic</code>, <code>tracking-tighter</code>, <code>leading-[0.9]</code>
+                                        </li>
+                                        <li><strong>Tier 2: Utility (Sans)</strong>
+                                            <br><em>Font:</em> "Inter Tight"
+                                            <br><em>Usage:</em> Body copy, descriptions, and primary navigation.
+                                            <br><em>Styling:</em> <code>font-light</code> or <code>font-normal</code>, <code>leading-relaxed</code>
+                                        </li>
+                                        <li><strong>Tier 3: Technical (Mono)</strong>
+                                            <br><em>Font:</em> "Geist Variable"
+                                            <br><em>Usage:</em> Metadata, buttons, versioning, and status indicators.
+                                            <br><em>Styling:</em> <code>uppercase</code>, <code>tracking-[0.2em]</code>, <code>text-[9px]</code> to <code>text-[11px]</code>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Layout & Spacing -->
+                                <div class="ds-simple-card">
+                                    <h2>5. Layout & Spacing</h2>
+                                    <p>Rekvin follows a "Breathable & Grounded" spacing system to prevent visual clutter in research-heavy contexts.</p>
+                                    <ul class="styled-list">
+                                        <li><strong>Hero Spacing:</strong> <code>mb-24</code> (96px) between the primary value statement and the feature grid.</li>
+                                        <li><strong>Section Dividers:</strong> Persistent <code>border-t border-rule</code> with large top-margins (<code>mt-32</code>) to separate application experience from environmental metadata.</li>
+                                        <li><strong>Pillar Layout:</strong> Responsive 3-column grid (<code>grid-cols-1 md:grid-cols-3</code>) with consistent <code>gap-8</code> (32px).</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Components & Textures -->
+                                <div class="ds-simple-card">
+                                    <h2>6. Visual Components & Textures</h2>
+                                    <ul class="styled-list">
+                                        <li><strong>Procedural Noise Texture:</strong> Layers a SVG-driven noise texture at <code>opacity: 0.2</code> over the background.</li>
+                                        <li><strong>Ambient Atmospheric Blobs:</strong> Large, highly-blurred (<code>blur-[120px]</code>) circles using node colors are placed behind content to create a sense of cognitive space. Opacity is kept at 0.3.</li>
+                                        <li><strong>Interactive "Glass":</strong> Cards use <code>bg-white/5</code> with subtle <code>border-white/10</code> borders, transitioning to <code>bg-white/10</code> and <code>border-white/20</code> on hover.</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Core UI Components -->
+                                <div class="ds-simple-card">
+                                    <h2>7. Core UI Components</h2>
+                                    <p>Based on the high-fidelity Beta flow, Rekvin utilizes several specialized UI components:</p>
+                                    <ul class="styled-list">
+                                        <li><strong>Canvas Nodes:</strong> Interactive glass containers (using React Flow) that represent key evidence artifacts like Personas, Research, and Ideas. Structured with Tier 3 (Mono) metadata headers and Tier 2 (Sans) body descriptions.</li>
+                                        <li><strong>Connecting Edges:</strong> Spline-based lines representing the "Waterfall Logic" flow between constraints and testable UI outputs.</li>
+                                        <li><strong>Global Lenses (D/V/F Toggles):</strong> A specialized pill-shaped navigation group allowing users to highlight Desirability, Viability, or Feasibility nodes globally.</li>
+                                        <li><strong>Testing Hub Console:</strong> A two-pane interface splitting the screen between the Persona's "Thought" narration and the Driver Agent's visual execution environment.</li>
+                                        <li><strong>Metrics Dashboard:</strong> Evaluative layouts mapping subjective interactions into quantitative behavioral data tables using the "Ink & White" dark aesthetic.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
