@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
-    // --- GSAP Intro Animations ---
+
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    const indicator = document.querySelector('.tab-indicator');
+
+    // --- Timeline for Intro Animations ---
     const tl = gsap.timeline({ defaults: { ease: 'power4.out' } });
 
     tl.to('.heading', {
@@ -10,70 +15,51 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1.5,
         startAt: { y: 100 }
     })
-        .to('.subheading', {
-            opacity: 1,
-            y: 0,
-            duration: 1.2,
-            startAt: { y: 40 }
-        }, '-=1.1')
-        .to('.tabs-section', {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            startAt: { y: 30 },
-            onComplete: () => {
-                // Animate initial active panel
-                const initialPanel = document.querySelector('.tab-panel.active');
-                if (initialPanel) {
-                    gsap.fromTo(initialPanel,
-                        { opacity: 0, y: 30 },
-                        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
-                    );
-                }
+    .to('.subheading', {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        startAt: { y: 40 }
+    }, '-=1.1')
+    .to('.tabs-section', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        startAt: { y: 30 },
+        onComplete: () => {
+            // Animate initial active panel
+            const initialPanel = document.querySelector('.tab-panel.active');
+            if (initialPanel) {
+                gsap.fromTo(initialPanel,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+                );
             }
-        }, '-=0.9');
+        }
+    }, '-=0.9');
 
-    // --- Tabs Logic ---
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanels = document.querySelectorAll('.tab-panel');
-    const indicator = document.querySelector('.tab-indicator');
+    // --- Core Tab Switching Logic ---
+    function switchTab(targetId, animate = true) {
+        const btn = document.querySelector(`.tab-btn[data-tab="${targetId}"]`);
+        const targetPanel = document.getElementById(targetId);
+        const currentPanel = document.querySelector('.tab-panel.active');
 
-    function updateIndicator(btn) {
-        const btnRect = btn.getBoundingClientRect();
-        const navRect = btn.parentElement.getBoundingClientRect();
+        if (!btn || !targetPanel || currentPanel === targetPanel) return;
 
+        // Update buttons
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update indicator
         gsap.to(indicator, {
             left: btn.offsetLeft,
             width: btn.offsetWidth,
-            duration: 0.5,
+            duration: animate ? 0.5 : 0,
             ease: 'back.out(1.2)'
         });
-    }
 
-    // Initialize indicator position
-    const activeBtn = document.querySelector('.tab-btn.active');
-    if (activeBtn) {
-        gsap.set(indicator, {
-            left: activeBtn.offsetLeft,
-            width: activeBtn.offsetWidth
-        });
-    }
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-tab');
-            const currentPanel = document.querySelector('.tab-panel.active');
-            const targetPanel = document.getElementById(targetId);
-
-            if (currentPanel === targetPanel) return;
-
-            // Update buttons
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            updateIndicator(btn);
-
-            // Update panels with animation
+        // Update panels
+        if (animate) {
             gsap.to(currentPanel, {
                 opacity: 0,
                 y: 10,
@@ -81,8 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 onComplete: () => {
                     currentPanel.classList.remove('active');
                     targetPanel.classList.add('active');
-
-                    // Re-init icons to ensure they render correctly in the new view
                     lucide.createIcons();
 
                     gsap.fromTo(targetPanel,
@@ -91,22 +75,64 @@ document.addEventListener('DOMContentLoaded', () => {
                     );
                 }
             });
+        } else {
+            currentPanel.classList.remove('active');
+            targetPanel.classList.add('active');
+            gsap.set(targetPanel, { opacity: 1, y: 0 });
+            lucide.createIcons();
+        }
+
+        // Update URL hash without causing a jump
+        if (window.location.hash !== `#${targetId}`) {
+            history.pushState(null, null, `#${targetId}`);
+        }
+    }
+
+    // --- Event Listeners ---
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-tab');
+            switchTab(targetId);
+        });
+
+        // Hover animations
+        btn.addEventListener('mouseenter', () => {
+            gsap.to(btn.querySelector('.tab-btn-content'), { y: -2, duration: 0.2 });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn.querySelector('.tab-btn-content'), { y: 0, duration: 0.2 });
         });
     });
 
-    // --- Microinteractions ---
-    tabBtns.forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-            gsap.to(btn.querySelector('.tab-btn-content'), {
-                y: -2,
-                duration: 0.2
-            });
-        });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn.querySelector('.tab-btn-content'), {
-                y: 0,
-                duration: 0.2
-            });
-        });
+    // Handle initial routing from URL hash
+    function handleInitialRouting() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            // Find if a button exists for this hash
+            const btn = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
+            if (btn) {
+                // Instantly switch to this tab before intro animations finish
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanels.forEach(p => p.classList.remove('active'));
+                
+                btn.classList.add('active');
+                const targetPanel = document.getElementById(hash);
+                targetPanel.classList.add('active');
+
+                // Initial indicator set
+                gsap.set(indicator, {
+                    left: btn.offsetLeft,
+                    width: btn.offsetWidth
+                });
+            }
+        }
+    }
+
+    // Listen for back/forward buttons
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) switchTab(hash);
     });
+
+    handleInitialRouting();
 });
