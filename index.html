@@ -53,6 +53,13 @@
                     </div>
                     <div class="btn-bg"></div>
                 </button>
+                <button class="tab-btn" data-tab="milestone-6">
+                    <div class="tab-btn-content">
+                        <span>Milestone 6</span>
+                        <span class="tab-subtitle">Usability Testing</span>
+                    </div>
+                    <div class="btn-bg"></div>
+                </button>
                 <div class="tab-indicator"></div>
             </div>
 
@@ -876,7 +883,343 @@
                                 </div>
                             </div>
                         </div>
-                        
+                    </div>
+                </div>
+
+                <!-- Milestone 6 Tab: Full Detailed Report -->
+                <div class="tab-panel" id="milestone-6">
+                    <div class="panel-inner">
+                        <!-- Report Embed Header -->
+                        <div class="content-section report-section" style="grid-column: span 12; margin-bottom: 1.25rem;">
+                            <div class="report-embed-container">
+                                <header class="report-embed-header">
+                                    <div class="label">
+                                        <i data-lucide="file-check" aria-hidden="true"></i>
+                                        <span>Full Research PDF Report</span>
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1HazFAlwSaS82R-uQRUGUNC29_gU4QFM7/view?usp=sharing" 
+                                       target="_blank" 
+                                       class="btn-external"
+                                       aria-label="View the full usability report on Google Drive">
+                                        <span>View in Google Drive</span>
+                                        <i data-lucide="external-link" aria-hidden="true"></i>
+                                    </a>
+                                </header>
+                                <iframe src="https://drive.google.com/file/d/1HazFAlwSaS82R-uQRUGUNC29_gU4QFM7/preview" 
+                                        class="embed-iframe" 
+                                        allow="autoplay"
+                                        title="Embedded Usability Testing Report PDF"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Executive Summary -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <div class="phase-tag">Full Report</div>
+                            <h3><i data-lucide="clipboard-check"></i> Executive Summary</h3>
+                            <p>This report documents the findings from two rounds of moderated usability testing conducted on Rekvin, a node-based synthetic persona engine designed for UX researchers and product teams. The application allows users to build AI-powered personas, run simulated user testing sessions, and analyze behavioral metrics through an interactive canvas interface.</p>
+                            <p>Testing surfaced critical friction points in onboarding clarity, node connection mechanics, canvas discoverability, and platform compatibility. However, participants found the visual aesthetic and AI-powered features highly compelling. This report presents the full methodology, analysis, and prioritized strategy.</p>
+                        </div>
+
+                        <!-- Methodology -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="microscope"></i> 2. Testing Methodology</h3>
+                            <p>The study used a moderated, task-based usability testing approach. Each session was conducted one-on-one with a moderator following a standardized protocol script. Sessions lasted approximately 30–45 minutes each and included a pre-test survey, four guided tasks, and a post-test survey.</p>
+
+                            <div style="margin-top: 2rem;">
+                                <h4>Participant Demographics</h4>
+                                <table class="ds-simple-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Dimension</th>
+                                            <th>Participant 1</th>
+                                            <th>Participant 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Professional Role</strong></td>
+                                            <td>Data Analyst / Scientist</td>
+                                            <td>UX/UI Designer</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Years of Experience</strong></td>
+                                            <td>2–5 years</td>
+                                            <td>2–5 years</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Persona Usage Frequency</strong></td>
+                                            <td>Never (1/5)</td>
+                                            <td>Sometimes (3/5)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Node Canvas Comfort</strong></td>
+                                            <td>Somewhat Uncomfortable (2/5)</td>
+                                            <td>Somewhat Comfortable (4/5)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>AI Tool Familiarity</strong></td>
+                                            <td>Extremely Familiar (5/5)</td>
+                                            <td>Very Familiar (4/5)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                <div>
+                                    <h4>Task Overview</h4>
+                                    <ul class="styled-list">
+                                        <li><strong>Task 1 — Persona Synthesis:</strong> Generate a complete synthetic persona using the Persona node.</li>
+                                        <li><strong>Task 2 — Branching Workflows:</strong> Connect the persona to an idea or research node.</li>
+                                        <li><strong>Task 3 — Live Simulation:</strong> Launch a simulation and interpret the Aura visualization.</li>
+                                        <li><strong>Task 4 — Metric Analysis:</strong> Interpret the Persona-Product Fit report and Cognitive Friction.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>Protocol & Consent</h4>
+                                    <p>Participants completed a voluntary consent form prior to testing. No personally identifiable information was collected. All data was anonymized. The moderator read a standardized introduction and emphasized a think-aloud protocol.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Application Overview -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="layout"></i> 3. Application Overview</h3>
+                            <p>The following screenshots illustrate the three primary sections of Rekvin as tested.</p>
+                            <div class="full-width-showcase" style="margin-top: 2rem;">
+                                <div class="full-width-item">
+                                    <img src="Images/Rekvin-v4/Personas.png" alt="Personas View">
+                                    <div class="full-width-caption"><strong>Figure 1.</strong> Personas view — node-based canvas for building synthetic persona profiles with the Quality Score panel.</div>
+                                </div>
+                                <div class="full-width-item">
+                                    <img src="Images/Rekvin-v4/Testing.png" alt="Testing View">
+                                    <div class="full-width-caption"><strong>Figure 2.</strong> Agent Testing view — drag-and-drop persona simulation interface with target application URL input.</div>
+                                </div>
+                                <div class="full-width-item">
+                                    <img src="Images/Rekvin-v4/Metrics.png" alt="Metrics View">
+                                    <div class="full-width-caption"><strong>Figure 3.</strong> Metrics view — metric node library with filtering options for analyzing simulation results.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Key Findings -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="lightbulb"></i> 4. Key Findings</h3>
+                            
+                            <!-- Finding 1 -->
+                            <div class="finding-box">
+                                <h2>Finding 1: Onboarding Clarity is Insufficient</h2>
+                                <p>Both participants struggled during the initial moments. Content on the landing page was skimmed or missed. Neither participant had a clear mental model of how the three sections (Personas, Testing, Metrics) connected.</p>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Observed Behaviors</span>
+                                    Participants skipped over instructional text. Neither could articulate the core workflow before starting. P1 expressed confusion about where to begin. No progress indicator exists.
+                                </div>
+                                <p style="margin-top: 1rem; font-style: italic; color: #818cf8;">"Onboarding needs clarity, also how to continue to the three sections. Like a progress bar/indicator." — P1</p>
+                            </div>
+
+                            <!-- Finding 2 -->
+                            <div class="finding-box">
+                                <h2>Finding 2: Discoverability & Connection Mechanics</h2>
+                                <p>The canvas interface was unfamiliar to users without prior node-tool experience. Even P2 encountered friction when drawing connections.</p>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Observed Behaviors</span>
+                                    P1 did not understand nodes were draggable. Both had difficulty finding connection ports. The concept of 'edges' was not intuitively discovered. Personas could not be edited after generation.
+                                </div>
+                            </div>
+
+                            <!-- Finding 3 -->
+                            <div class="finding-box">
+                                <h2>Finding 3: Platform Compatibility & Responsiveness</h2>
+                                <p>Technical issues limited Task 3 exploration. The deployed version was unable to use Gemini in computer use mode.</p>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Observed Behaviors</span>
+                                    Gemini computer use non-functional in deployed environment. Responsiveness issues on various screens. One node appeared "stuck". Canvas zoom/pan required acclimatization.
+                                </div>
+                            </div>
+
+                            <!-- Finding 4 -->
+                            <div class="finding-box">
+                                <h2>Finding 4: High-Value Features Well Received</h2>
+                                <p>Participants responded positively to voice interaction and persona conversation features (pre/post session).</p>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Positives Highlighted</span>
+                                    Voice Interaction described as 'cool' and memorable. Node-based system's flexibility seen as highly valuable. Aura visualization perceived as visually engaging. Dark aesthetic was appreciated.
+                                </div>
+                            </div>
+
+                            <!-- Finding 5 -->
+                            <div class="finding-box" style="border-left-color: #818cf8;">
+                                <h2>Finding 5: UI Priority Over Logic</h2>
+                                <p>An interesting meta-finding emerged: participant expectations were oriented more toward the interface's visual quality and responsiveness than toward evaluating whether the synthetic persona's behavior matched a real user profile.</p>
+                            </div>
+                        </div>
+
+                        <!-- Survey Results -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="bar-chart-3"></i> 5. Survey Results</h3>
+                            
+                            <div style="margin-top: 2rem;">
+                                <h4>Post-Test Survey: SUS Results</h4>
+                                <p>The System Usability Scale (SUS) scores (0-4 scale interpretation recorded):</p>
+                                <table class="ds-simple-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Statement</th>
+                                            <th>P1</th>
+                                            <th>P2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>Q1</td><td>I would like to use this system frequently.</td><td>Disagree</td><td>Neutral</td></tr>
+                                        <tr><td>Q2</td><td>I found the system unnecessarily complex.</td><td>Disagree</td><td>Disagree</td></tr>
+                                        <tr><td>Q3</td><td>I thought the system was easy to use.</td><td>Agree</td><td>Agree</td></tr>
+                                        <tr><td>Q4</td><td>I would need technical person support.</td><td>Disagree</td><td>Disagree</td></tr>
+                                        <tr><td>Q5</td><td>various functions were well integrated.</td><td>Agree</td><td>Agree</td></tr>
+                                        <tr><td>Q6</td><td>Too much inconsistency.</td><td>Str. Disagree</td><td>Disagree</td></tr>
+                                        <tr><td>Q7</td><td>Most people would learn this quickly.</td><td>Agree</td><td>Agree</td></tr>
+                                        <tr><td>Q8</td><td>The system was cumbersome to use.</td><td>Neutral</td><td>Disagree</td></tr>
+                                        <tr><td>Q9</td><td>I felt very confident using the system.</td><td>Neutral</td><td>Agree</td></tr>
+                                        <tr><td>Q10</td><td>I needed to learn a lot before getting started.</td><td>Str. Disagree</td><td>Disagree</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div style="margin-top: 3rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem;">
+                                <div>
+                                    <h4>Feature-Specific Ratings (1-5 Scale)</h4>
+                                    <table class="ds-simple-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Feature</th>
+                                                <th>Statement</th>
+                                                <th>P1</th>
+                                                <th>P2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td><strong>Node Canvas</strong></td><td>Intuitive connecting</td><td>5</td><td>3</td></tr>
+                                            <tr><td><strong>AI Synthesis</strong></td><td>Magic Generate felt seamless</td><td>4</td><td>4</td></tr>
+                                            <tr><td><strong>Aura Anim.</strong></td><td>Helped understand AI thinking</td><td>5</td><td>3</td></tr>
+                                            <tr><td><strong>Metrics</strong></td><td>Easy to read indicators</td><td>4</td><td>2</td></tr>
+                                            <tr><td><strong>Aesthetics</strong></td><td>Modern, focused feel</td><td>4</td><td>3</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div>
+                                    <h4>Open-Ended Feedback (P1)</h4>
+                                    <div class="ds-simple-card" style="margin-top: 1rem;">
+                                        <strong>Most Frustrating:</strong>
+                                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">"Onboarding needs clarity, also how to continue... progress bar/indicator."</p>
+                                    </div>
+                                    <div class="ds-simple-card" style="margin-top: 1rem;">
+                                        <strong>One Change:</strong>
+                                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">"Clear onboarding flow, a demo maybe to see potential options and tools."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="list-checks"></i> 6. Prioritized Strategy</h3>
+                            
+                            <!-- Priority 1 -->
+                            <div class="finding-box" style="border-left-color: #ef4444;">
+                                <h2>Priority 1 — Critical: Onboarding Flow</h2>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Recommended Actions</span>
+                                    <ul class="styled-list" style="margin-top: 1rem;">
+                                        <li>Add interactive guided tour for first-time users.</li>
+                                        <li>Implement visual progress indicator (Personas &rarr; Testing &rarr; Metrics).</li>
+                                        <li>Create demo mode or sample project for immediate exploration.</li>
+                                        <li>Ensure instructional text on landing page is high-contrast and prominent.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Priority 2 -->
+                            <div class="finding-box" style="border-left-color: #f59e0b;">
+                                <h2>Priority 2 — High: Node Discoverability</h2>
+                                <div class="behavior-box">
+                                    <span class="behavior-title">Recommended Actions</span>
+                                    <ul class="styled-list" style="margin-top: 1rem;">
+                                        <li>Add animated tooltips on connection ports to indicate interactivity.</li>
+                                        <li>Include in-canvas "animated first-use hints".</li>
+                                        <li>Enable editing of saved personas.</li>
+                                        <li>Add search/filter bar to the node palette.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Priority 3 & 4 -->
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                                <div class="ds-simple-card">
+                                    <h4 style="color: #f59e0b;">Priority 3: Resolve Compatibility</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">Resolve Gemini computer-use integration and conduct responsive design testing across device sizes.</p>
+                                </div>
+                                <div class="ds-simple-card">
+                                    <h4 style="color: #3b82f6;">Priority 4: Enhance Metrics Clarity</h4>
+                                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">Add tooltips to each metric explaining scores in plain language. Add a glossary for Behavioral Metrics.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="award"></i> 7. Conclusion</h3>
+                            <p>Rekvin presents a genuinely innovative approach to synthetic persona testing. Its core value proposition is well understood and appreciated by participants once they engage with it. The voice interaction, node-based flexibility, and visual aesthetic were standout positives.</p>
+                            <p>With focused iteration on the **onboarding experience** and **node interaction model**, Rekvin has strong potential to deliver a compelling, differentiated product experience for professional design teams.</p>
+                        </div>
+
+                        <!-- Appendix -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="library"></i> Appendix & Raw Data</h3>
+                            
+                            <!-- Protocol Script -->
+                            <details>
+                                <summary><i data-lucide="scroll-text"></i> A. Testing Protocol & Script</summary>
+                                <div class="details-content">
+                                    <h4>Moderator Introduction</h4>
+                                    <p>"Hi, thank you so much for participating today. My name is [Your Name], and I'm part of a team designing a new tool for user researchers called Rekvin. We are testing the platform, not you. You cannot make any mistakes today. If you get stuck, that's actually great data for us. Please 'Think Aloud'. Do you have any questions before we begin?"</p>
+                                    
+                                    <h4>Task Scenarios</h4>
+                                    <p><strong>Task 1 — Persona Synthesis:</strong> "You are starting a new research project and need to test a concept on a specific type of user... Show me how you would generate a synthesis profile."</p>
+                                    <p><strong>Task 2 — Branching Workflows:</strong> "Now that you have your persona, you want to set up a research simulation... Connect your newly created persona to a research node."</p>
+                                    <p><strong>Task 3 — Running a Live Session:</strong> "Your workflow is set up... Please start the simulation. Tell me what you think is happening."</p>
+                                    <p><strong>Task 4 — Metric & Friction Analysis:</strong> "The simulation has finished... locate the Persona-Product Fit report and Cognitive Friction metrics."</p>
+                                </div>
+                            </details>
+
+                            <!-- Observation Notes -->
+                            <details>
+                                <summary><i data-lucide="notebook"></i> C. Session Observation Notes</summary>
+                                <div class="details-content">
+                                    <h4>P1 (Data Analyst)</h4>
+                                    <p><strong>T1:</strong> Scanned landing page without reading text. Did not identify Magic Generate button immediately. Once oriented, positive reaction to output quality.</p>
+                                    <p><strong>T2:</strong> Difficulty locating connection ports. Attempted to drag node rather than edges. Frustration: "I expected clicking to open a menu."</p>
+                                    <p><strong>T4:</strong> Metrics clear in concept, but difficult to interpret results contextually without completed simulation.</p>
+
+                                    <h4>P2 (UX/UI Designer)</h4>
+                                    <p><strong>T1:</strong> Comfortable with canvas concept. Understood drag-and-drop faster. Noted output felt realistic and detailed.</p>
+                                    <p><strong>T2:</strong> Connected nodes with less difficulty but still required exploration. Surprised persona was not editable.</p>
+                                    <p><strong>T4:</strong> Some difficulty interpreting metric categories without context. Suggested a glossary for definitions.</p>
+                                </div>
+                            </details>
+
+                            <!-- Asset Links -->
+                            <div class="feature-grid" style="margin-top: 2rem;">
+                                <a href="https://docs.google.com/document/d/1Bk0b_3TWpkX8wQz8mts29xhqOEBls1rIuTRW76DvJ3c/edit?usp=sharing" target="_blank" class="feature-item" style="text-decoration: none;">
+                                    <i data-lucide="file-text"></i><span>Full Consent Form</span>
+                                </a>
+                                <a href="https://docs.google.com/document/d/1el4v7QO4hxtksNUtMNws5Q3IQ17Yv7E9c69I8q3_GT4/edit?usp=sharing" target="_blank" class="feature-item" style="text-decoration: none;">
+                                    <i data-lucide="scroll-text"></i><span>Full Protocol Script</span>
+                                </a>
+                                <a href="https://docs.google.com/spreadsheets/d/1eLuIjokZzWER-zM9MMkjvQy32sjV3vwrVu4Uxlvdfcw/edit?usp=sharing" target="_blank" class="feature-item" style="text-decoration: none;">
+                                    <i data-lucide="database"></i><span>Raw Data & SUS</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

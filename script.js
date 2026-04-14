@@ -71,7 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     gsap.fromTo(targetPanel,
                         { opacity: 0, y: 10 },
-                        { opacity: 1, y: 0, duration: 0.4 }
+                        { opacity: 1, y: 0, duration: 0.4, onComplete: () => {
+                            // Specialized report entrance
+                            if (targetId === 'milestone-6') {
+                                gsap.from('.report-section', {
+                                    opacity: 0,
+                                    y: 20,
+                                    scale: 0.98,
+                                    duration: 0.8,
+                                    ease: 'power3.out'
+                                });
+                            }
+                        }}
                     );
                 }
             });
