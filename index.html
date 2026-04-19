@@ -60,6 +60,13 @@
                     </div>
                     <div class="btn-bg"></div>
                 </button>
+                <button class="tab-btn" data-tab="milestone-7">
+                    <div class="tab-btn-content">
+                        <span>Milestone 7</span>
+                        <span class="tab-subtitle">Final Report</span>
+                    </div>
+                    <div class="btn-bg"></div>
+                </button>
                 <div class="tab-indicator"></div>
             </div>
 
@@ -1218,6 +1225,128 @@
                                 <a href="https://docs.google.com/spreadsheets/d/1eLuIjokZzWER-zM9MMkjvQy32sjV3vwrVu4Uxlvdfcw/edit?usp=sharing" target="_blank" class="feature-item" style="text-decoration: none;">
                                     <i data-lucide="database"></i><span>Raw Data & SUS</span>
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Milestone 7 Tab: Final Improvements & Report -->
+                <div class="tab-panel" id="milestone-7">
+                    <div class="panel-inner">
+                        <!-- Overview -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <div class="phase-tag">Final Report</div>
+                            <h3><i data-lucide="file-text"></i> 1. Overview</h3>
+                            <p>Following the usability testing conducted in Milestone 6, three key areas were identified for improvement to reduce user friction and enhance the onboarding experience. This report outlines the severity ratings of the identified issues and the rationale behind the implemented changes.</p>
+                        </div>
+
+                        <!-- Issue Severity Ratings -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="alert-triangle"></i> 2. Issue Severity Ratings</h3>
+                            <p>Based on participant feedback and behavioral observations from Milestone 6, the following severity ratings have been assigned:</p>
+                            <table class="ds-simple-table">
+                                <thead>
+                                    <tr>
+                                        <th>Issue Identified</th>
+                                        <th>Severity Rating</th>
+                                        <th>Justification</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Lack of Onboarding:</strong> Users struggled to start and did not understand the "Magic Generate" or node-based features.</td>
+                                        <td style="color: var(--color-red); font-weight: 600;">1. Major Issue</td>
+                                        <td>Both participants required significant moderator intervention to begin. P1 explicitly requested a demo or tour.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Workflow Confusion:</strong> Users could not articulate how the Personas, Testing, and Metrics sections connected.</td>
+                                        <td style="color: var(--color-yellow); font-weight: 600;">2. Moderate Issue</td>
+                                        <td>While users could navigate eventually, the lack of a "mental map" caused hesitation during transitions between modules.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Low Instructional Discoverability:</strong> High-value instructions on the landing page were skipped due to visual styling.</td>
+                                        <td style="color: var(--color-blue); font-weight: 600;">3. Minor Issue</td>
+                                        <td>This delayed task success but did not prevent it. Improving contrast ensures the "how-to" documentation is accessible.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Implemented Changes & Decision-Making -->
+                        <div class="content-section" style="grid-column: span 12; margin-top: 4rem;">
+                            <h3 style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem;"><i data-lucide="git-merge"></i> 3. Implemented Changes & Decision-Making</h3>
+                            <p style="margin-bottom: 5rem; font-size: 1.1rem; color: var(--text-secondary); max-width: 800px;">To address the identified friction points, we implemented three structural changes to the Rekvin interface, focusing on guidance, hierarchy, and visual clarity.</p>
+                            
+                            <!-- Change 1 -->
+                            <div style="margin-bottom: 8rem;">
+                                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Change 1: Interactive Guided Tour</h2>
+                                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 2rem; max-width: 900px;"><strong>Description:</strong> A high-fidelity onboarding experience that triggers upon first entry, walking users through the core node-based workflow and AI generation features.</p>
+                                
+                                <div style="margin-bottom: 3rem;">
+                                    <span style="display: block; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-purple); margin-bottom: 0.75rem;">Design Rationale</span>
+                                    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 850px;">User data revealed "blank canvas paralysis" as a primary friction point. The guided tour reduces cognitive load by providing immediate orientation, ensuring users reach the "Magic Generate" value proposition in under 30 seconds.</p>
+                                </div>
+                                
+                                <img src="Images/Rekvin-v5/Personas.png" alt="Guided Tour Modal" style="width: 100%; border-radius: 12px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+                                <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-gray); font-style: italic; text-align: center;">Visual: The onboarding overlay highlights the primary interaction zone while providing clear instructions.</p>
+                            </div>
+
+                            <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 8rem;">
+
+                            <!-- Change 2 -->
+                            <div style="margin-bottom: 8rem;">
+                                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Change 2: Visual Progress Indicator (Stepper)</h2>
+                                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 2rem; max-width: 900px;"><strong>Description:</strong> A persistent global status bar integrated into the header to provide continuous feedback on the research pipeline stage.</p>
+                                
+                                <div style="margin-bottom: 3rem;">
+                                    <span style="display: block; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-green); margin-bottom: 0.75rem;">Design Rationale</span>
+                                    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 850px;">During Milestone 6, participants struggled to understand how "Personas" transitioned to "Testing." The stepper provides a mental model for the platform's sequential research workflow, fostering user autonomy.</p>
+                                </div>
+                                
+                                <img src="Images/Rekvin-v5/Stepper.png" alt="Global Progress Indicator" style="width: 100%; border-radius: 12px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+                                <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-gray); font-style: italic; text-align: center;">Visual: The high-contrast stepper clearly demarcates the "Personas" phase as active.</p>
+                            </div>
+
+                            <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 8rem;">
+
+                            <!-- Change 3 -->
+                            <div style="margin-bottom: 8rem;">
+                                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: #fff;">Change 3: Enhanced Typographic Hierarchy</h2>
+                                <p style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 2rem; max-width: 900px;"><strong>Description:</strong> A complete refactor of text styles on the landing page and instruction panels to prioritize readability and WCAG AA compliance.</p>
+                                
+                                <div style="margin-bottom: 3rem;">
+                                    <span style="display: block; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-blue); margin-bottom: 0.75rem;">Design Rationale</span>
+                                    <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.7; max-width: 850px;">Users were previously skipping instructional micro-copy. By increasing weight and contrast, we ensure that critical "How-To" information is cognitively prominent without cluttering the UI.</p>
+                                </div>
+                                
+                                <img src="Images/Rekvin-v5/Homepage.png" alt="Enhanced Typography" style="width: 100%; border-radius: 12px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+                                <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--color-gray); font-style: italic; text-align: center;">Visual: The hero section utilizes varied weights of "Inter Tight" for an accessible yet premium entry point.</p>
+                            </div>
+                        </div>
+
+                        <!-- Success Metrics -->
+                        <div class="content-section" style="grid-column: span 12;">
+                            <h3><i data-lucide="trending-up"></i> 4. Success Metrics for Review</h3>
+                            <p>To validate these changes, the following metrics will be monitored in future testing:</p>
+                            <div class="evolution-gallery">
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h4 style="color: var(--color-blue); margin-bottom: 0.5rem;">Time-to-Value</h4>
+                                        <p>Target a 40% reduction in time-to-generate the first persona by reducing initial orientation time.</p>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h4 style="color: var(--color-green); margin-bottom: 0.5rem;">Self-Correction</h4>
+                                        <p>Monitor how often users reference the Stepper to navigate between research phases without assistance.</p>
+                                    </div>
+                                </div>
+                                <div class="gallery-item">
+                                    <div class="gallery-caption">
+                                        <h4 style="color: var(--color-purple); margin-bottom: 0.5rem;">Usability Score</h4>
+                                        <p>Aiming for an 85+ SUS score by addressing the "learnability" and "complexity" friction points.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

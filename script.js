@@ -73,12 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         { opacity: 0, y: 10 },
                         { opacity: 1, y: 0, duration: 0.4, onComplete: () => {
                             // Specialized report entrance
-                            if (targetId === 'milestone-6') {
-                                gsap.from('.report-section', {
+                            if (targetId === 'milestone-6' || targetId === 'milestone-7') {
+                                gsap.from('.finding-box, .report-section', {
                                     opacity: 0,
                                     y: 20,
                                     scale: 0.98,
                                     duration: 0.8,
+                                    stagger: 0.1,
                                     ease: 'power3.out'
                                 });
                             }
